@@ -1,0 +1,24 @@
+Router သုံးမယ်ဆိုရင် ---
+1. npm i react-router-dom
+2. component ခွဲရေး / css file ခွဲရေးထားတယ်ဆိုရင် ရေးထားတဲ့ css file ကို Component တိုင်းမှာ လိုက်ချိတ်
+3. App.js မှာ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; လုပ်
+4. App.js မှာ 
+	<Router> 
+        <Routes>
+          <Route path='/' element={<Home/>}></Route> // path နေရာမှာ ပတ်လမ်းကြောင်းပေး / Element မှာက ဖော်ပြချင်တဲ့ Component ကို ရေး /
+          <Route path='*' element={<Error/>}></Route> // user တွေ မရှိတဲ့ path ကို သွားရင် ပြဖို့ သုံးတယ် // All Component အတွက်မလို့ "*" ကိုသုံးတယ်
+        </Routes>
+      </Router>
+5. Component တွေ တစ်ခုကနေ တစ်ခု Link ခုန် ချင်ရင် Link or NavLink ကို သုံး / Navlink မှာ Active Class ထည့်ပေးပြီး ဖြစ်သည်။
+6. button ကို နှိပ်ပြီး Component(Route) တစ်ခုကနေ တစ်ခုကို Link ခုန်ချင်ရင် - 
+import { useNavigate } from 'react-router-dom'; လုပ်
+7. const name = useNavigate(); ကို ပေး
+8. button မှာ ပေးထားသော function ထဲမှာ 
+	 name(-1) // တစ်ဆင့်ချင်းစီ နောက်ဆုတ်ချင်ရင် ဒီအတိုင်း 
+	name("/services") //component အတိအကျ သွားချင်ရင် Path ထည့်ပေး
+9. Route တစ်ခုကနေ နောက်တစ်ခုကို Data တွေပို့ချင်ရင် - 
+	 nav ("/services", {state:{text:inputRef.current.value}} //state parameter ပေးပြီး ပို့လို့ရတယ်)
+10. ဟိုဘက်ကနေပို့တဲ့ Data ကို လက်ခံဖို့ဆိုရင် useLocation ကို သုံး / useLocation.state.(any)
+/*state ထဲမှာ text or Data ရှိ / မရှိ စစ်ချင်ရင် Ternary operator ကို သုံး */ or ( .anyone ) .operational changing ကို သုံး
+	
+	

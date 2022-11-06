@@ -1,3 +1,9 @@
+.nav{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
 .App {
   text-align: center;
 }
