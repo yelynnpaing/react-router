@@ -20,5 +20,9 @@ import { useNavigate } from 'react-router-dom'; လုပ်
 	 nav ("/services", {state:{text:inputRef.current.value}} //state parameter ပေးပြီး ပို့လို့ရတယ်)
 10. ဟိုဘက်ကနေပို့တဲ့ Data ကို လက်ခံဖို့ဆိုရင် useLocation ကို သုံး / useLocation.state.(any)
 /*state ထဲမှာ text or Data ရှိ / မရှိ စစ်ချင်ရင် Ternary operator ကို သုံး */ or ( .anyone ) .operational changing ကို သုံး
+11. သီးသန့် သတ်မှတ်ထားတဲ့ နေရာ တွေကို User သွားလို့ မရအောင် လုပ်ထားပြီး သွားလိုက်တိုင်း User တွေရဲ့ မူလနေရာ ပြန်ရောက်အောင် လုပ်ချင်တယ်
+ဆိုရင် Nevigate ကို သုံး / သုံးဖို့ အတွက် Nevigate ကို import လုပ် / Condition စစ် / မှန်ရင် သွားလို့ ရမယ် / မှားရင် 
+<Navigate to={-1} />
+12. Address bar မှာ user ရိုက်တဲ့ Data တွေကို Route တွေမှာ ပြဖို့အတွက် useParams () ကို သုံး /
 	
 	

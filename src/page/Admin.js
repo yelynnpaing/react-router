@@ -3,10 +3,11 @@ import { Navigate } from 'react-router-dom';
 const Admin = () => {
     if(localStorage.getItem("token")){
         return (
-            <div className='container'>Admin</div>
+            <Navigate to={-1} />
+           
         )
     }else{
-        <Navigate to={-1} />
+        <div className='container'>Admin</div>
         // return <h1 className='container'>You r not a Admin</h1>
         
     }
